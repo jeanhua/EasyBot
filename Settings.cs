@@ -43,7 +43,7 @@ namespace EasyBot
         // 收到私聊消息时触发
         public static void OnFriendMessageReceived(BotContext Bot, FriendMessageEvent @event)
         {
-
+            if(@event.Chain.FriendUin == Bot.BotUin)return; //这里是防止自己发的消息触发导致无限循环，可根据逻辑是否更改
         }
 
         // 收到群聊消息时触发
