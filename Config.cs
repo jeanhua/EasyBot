@@ -85,9 +85,9 @@ namespace EasyBot
                             Console.ReadLine();
                             Environment.Exit(0);
                         }
-                        catch
+                        catch(IOException e)
                         {
-                            Console.WriteLine($"删除失败: {tx}\n按下回车退出");
+                            Console.WriteLine($"删除失败: {e.ToString()}\n按下回车退出");
                             Console.ReadLine();
                             Environment.Exit(0);
                         }
