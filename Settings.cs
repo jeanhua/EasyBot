@@ -1,5 +1,6 @@
 ﻿using System;
 using Lagrange.Core;
+using Lagrange.Core.Common.Interface.Api;
 using Lagrange.Core.Event.EventArg;
 
 namespace EasyBot
@@ -10,6 +11,7 @@ namespace EasyBot
         // Bot 上线时触发,可用于监控是否登录成功
         public static void OnBotOnlineEvent(BotContext Bot,BotOnlineEvent @event)
         {
+            Login.SaveKeystore(Bot.UpdateKeystore());
             Console.WriteLine("登陆成功！");
         }
 
