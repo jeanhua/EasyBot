@@ -8,7 +8,7 @@ namespace Program
     class Application
     {
         // 主程序入口
-        public static async void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var app = await EasyBot.Login.Begin();
         }
